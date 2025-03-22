@@ -22,7 +22,15 @@
     </header>
     <main>
       <section id="hero-section">
-        <img src="images/heroLion.jpg" />
+        <div id="hero-contents">
+          <h2>LIONS FOREVER</h2>
+          <p>
+            Lions forever is ready made customizable portfolio project which you
+            can easily turn into your own page with a few easy changes.
+          </p>
+          <button id="seeMore" type="button">See more</button>
+        </div>
+        <!-- <img src="images/heroLion.jpg" /> -->
       </section>
 
       <secton id="projects">
@@ -30,22 +38,25 @@
           <h2>Projects</h2>
           <div id="projects-container">
             <div class="box">
-              <img src="./images/lion1.jpg" />
+              <img src="./images/lion1.jpg" alt="a lion eating a cacarse" />
               <p>Lorem Ipsum</p>
               <a href="#">See More</a>
             </div>
             <div class="box">
-              <img src="./images/lion2.jpg" />
+              <img src="./images/lion2.jpg" alt="a lion yawing" />
               <p>Lorem Ipsum</p>
               <a href="#">See More</a>
             </div>
             <div class="box">
-              <img src="./images/lion3.jpg" />
+              <img src="./images/lion3.jpg" alt="a lion and a cub" />
               <p>Lorem Ipsum</p>
               <a href="#">See More</a>
             </div>
             <div class="box">
-              <img src="./images/lion4.jpg" />
+              <img
+                src="./images/lion4.jpg"
+                alt="two lionesses lying on a rock"
+              />
               <p>Lorem Ipsum</p>
               <a href="#">See More</a>
             </div>
@@ -78,7 +89,44 @@
           </div>
         </div>
       </section>
-      <section id="contact" class="section-container"></section>
+
+      <section id="contact">
+        <div id="contact-box">
+          <h2>Contact</h2>
+          <form>
+            <label for="name">Your name:</label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              required
+              placeholder="John Doe"
+            />
+            <label for="email">Your email:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              placeholder="JohnDoe@email.com"
+            />
+            <label for="message">Message to me:</label>
+            <textarea
+              name="message"
+              id="message"
+              rows="5"
+              cols="20"
+              placeholder="Please write your message here"
+            ></textarea>
+          </form>
+          <div id="buttonContainer">
+            <button id="sendMessage">SEND MESSAGE</button>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer>
+      <p>Copyright © My Website 2025</p>
+    </footer>
   </body>
 </html>
