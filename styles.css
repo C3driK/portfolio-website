@@ -8,6 +8,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
@@ -26,7 +27,6 @@ header div {
 
 h1 {
   display: inline-block;
-  font-family: "railway", sans-serif;
   margin: 0;
 }
 nav {
@@ -49,11 +49,8 @@ a {
 }
 nav a {
   font-size: 1.2rem;
+  color: black;
 }
-
-/* .section-container {
-  margin: 0 200px;
-} */
 
 #hero-section {
   height: 50vw;
@@ -65,19 +62,22 @@ nav a {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white;
+  color: beige;
 }
+
 #hero-contents {
   text-align: center;
 }
 
 #hero-section h2 {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 4rem;
+  font-weight: 900;
   margin: 20px;
 }
 #hero-contents p {
-  font-size: 1.2rem;
+  font-style: oblique;
+  font-size: 1.4rem;
+  font-weight: 700;
   margin-bottom: 15px;
 }
 
@@ -92,12 +92,6 @@ nav a {
   background-color: #481620;
   color: #dbad6a;
 }
-
-/* #hero-section img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-} */
 
 /* Projects section */
 #projects {
@@ -273,4 +267,368 @@ footer {
   top: 250px;
   left: 80px;
   background-color: #dbad6a;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  color: black;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+}
+
+#close-modal {
+  color: #340101;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#close-modal:hover,
+#close-modal:focus {
+  color: orangered;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* mobile devices */
+
+@media screen and (max-width: 768px) {
+  /* Header adjustments */
+  header div {
+    margin: 0 20px;
+    padding: 5px;
+  }
+
+  h1 {
+    display: block;
+    text-align: center;
+  }
+
+  nav {
+    width: 100%;
+    display: block;
+  }
+
+  nav ul {
+    justify-content: center;
+    padding: 0;
+  }
+
+  /* Hero section */
+  #hero-section {
+    height: 100vh;
+  }
+
+  #hero-section h2 {
+    font-size: 2.5rem;
+  }
+
+  /* Projects section */
+  #projects {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  #projects-box {
+    margin: 0 20px;
+  }
+
+  #projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  /* About section */
+  #about {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  #about-contents {
+    margin: 0 20px;
+  }
+
+  #about-items {
+    flex-direction: column;
+    height: auto;
+  }
+
+  #about-contents img {
+    margin: 20px auto;
+    width: 80%;
+    display: block;
+  }
+
+  /* Contact section */
+  #contact {
+    height: auto;
+    padding: 20px 0 40px 0;
+  }
+
+  #contact-box {
+    margin: 0 20px;
+    width: 90%;
+  }
+
+  label,
+  input,
+  textarea {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  /* Back to top button */
+  #backToTop {
+    top: auto;
+    left: auto;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+  }
+}
+
+/* Tablet styles (768px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  header div,
+  #projects-box,
+  #about-contents,
+  #contact-box {
+    margin: 0 50px;
+  }
+
+  #projects-container {
+    flex-wrap: wrap;
+  }
+
+  .box {
+    width: 45%;
+    margin: 10px;
+  }
+}
+
+/* Mobile menu styles */
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.show {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  li {
+    margin: 15px;
+  }
+
+  .box a {
+    padding: 10px;
+    display: inline-block;
+  }
+}
+
+/* Add this to your styles.css file */
+
+/* Theme toggle button styles */
+.theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 100;
+  padding: 5px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.dark .theme-toggle {
+  background-color: rgba(219, 173, 106, 0.2);
+}
+
+.light .theme-toggle {
+  background-color: rgba(72, 22, 32, 0.2);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+
+/* Light mode theme */
+body.light {
+  /* Header */
+  --header-bg: #f9e7d0;
+  --text-color: #481620;
+  --nav-link-color: #6d3b47;
+
+  /* Projects section */
+  --projects-bg: #f5d6a8;
+  --box-bg: #c88a96;
+  --box-text: #481620;
+  --box-link: #481620;
+
+  /* About section */
+  --about-bg: #d0a190;
+  --about-text: #481620;
+
+  /* Contact section */
+  --contact-bg: #f9e7d0;
+  --contact-text: #481620;
+  --button-bg: #6d3b47;
+  --button-text: #f9e7d0;
+  --button-hover-bg: #dbad6a;
+  --button-hover-text: #481620;
+
+  /* Footer */
+  --footer-bg: #d0a190;
+  --footer-text: #481620;
+}
+
+/* Apply light mode classes */
+body.light header {
+  background-color: var(--header-bg);
+  color: var(--text-color);
+}
+
+body.light nav a {
+  color: var(--nav-link-color);
+}
+
+body.light #projects {
+  background-color: var(--projects-bg);
+}
+
+body.light #projects-box {
+  background-color: var(--projects-bg);
+}
+
+body.light .box {
+  background-color: var(--box-bg);
+  box-shadow: 5px 5px 2.5px rgba(72, 22, 32, 0.5);
+}
+
+body.light .box p {
+  color: var(--box-text);
+}
+
+body.light .box a {
+  color: var(--box-link);
+  font-weight: bold;
+}
+
+body.light #about {
+  background-color: var(--about-bg);
+  color: var(--about-text);
+}
+
+body.light #about-contents {
+  background-color: var(--about-bg);
+}
+
+body.light #contact {
+  background-color: var(--contact-bg);
+  color: var(--contact-text);
+}
+
+body.light #sendMessage,
+body.light #seeMore,
+body.light #backToTop {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+}
+
+body.light #sendMessage:hover,
+body.light #seeMore:hover,
+body.light #backToTop:hover {
+  background-color: var(--button-hover-bg);
+  color: var(--button-hover-text);
+}
+
+body.light footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+}
+
+body,
+header,
+nav a,
+#projects,
+#projects-box,
+.box,
+.box p,
+.box a,
+#about,
+#about-contents,
+#contact,
+button,
+footer {
+  transition: background-color 0.5s, color 0.5s;
+}
+
+body:not(.light) {
+  background-color: white;
 }
