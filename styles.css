@@ -233,7 +233,9 @@ textarea {
 }
 
 #sendMessage {
-  padding: 10px;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
   background-color: #dbad6a;
   border-radius: 5px;
   box-shadow: 2px 2px 0.5px grey;
