@@ -58,7 +58,7 @@ nav a {
 #hero-section {
   height: 50vw;
   margin: 0;
-  background-image: url("./images/heroLion.jpg");
+  background-image: url("./images/lions/heroLion.WebP");
   background-size: cover;
   background-attachment: scroll;
   display: flex;
@@ -264,4 +264,13 @@ footer {
   background-color: black;
   color: white;
   width: auto;
+}
+
+#backToTop {
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+  top: 250px;
+  left: 80px;
+  background-color: #dbad6a;
 }
